@@ -6,9 +6,6 @@ RUN apt-get update && \
                        libreadline-dev libncurses5-dev libpcre3-dev \
                        libssl-dev
 
-RUN apt-get -y install python-pip python3-pip
-RUN pip install supervisor
-
 RUN export OPENRESTY_VERSION=1.9.15.1 && \
     cd /tmp && \
     curl -o openresty.tar.gz -L https://openresty.org/download/openresty-$OPENRESTY_VERSION.tar.gz && \
